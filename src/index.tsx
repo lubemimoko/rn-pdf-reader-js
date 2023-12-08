@@ -280,7 +280,7 @@ class PdfReader extends React.Component {
                     onError,
                     onHttpError: onError,
                     style,
-                    source: renderedOnce || !isAndroid ? source : { uri: undefined },
+                    source: source ? source : { uri: undefined },
                 }, { allowFileAccess: isAndroid, allowFileAccessFromFileURLs: isAndroid, allowUniversalAccessFromFileURLs: isAndroid, scalesPageToFit: Platform.select({ android: false }), mixedContentMode: isAndroid ? 'always' : undefined, sharedCookiesEnabled: false, startInLoadingState: !noLoader, renderLoading: () => (noLoader ? React.createElement(View, null) : React.createElement(Loader, null)) }, webviewProps))));
         }
         return !noLoader && !ready && React.createElement(Loader, null);
