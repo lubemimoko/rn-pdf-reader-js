@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, ActivityIndicator, Platform, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 const { cacheDirectory, writeAsStringAsync, deleteAsync, getInfoAsync, EncodingType, } = FileSystem;
 function viewerHtml(base64, customStyle, withScroll = false, withPinchZoom = false, maximumPinchZoomScale = 5) {
     return `
